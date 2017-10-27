@@ -87,7 +87,7 @@ resultSection.addEventListener("click", (event) => {
             if (parent === noteList.firstElementChild) {
                 return;
             } else {
-                noteList.insertBefore(next, parent);
+                noteList.insertBefore(parent, prev);
             }
         }
         else if (selected.className === "moveDown") {
