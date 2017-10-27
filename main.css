@@ -2,14 +2,46 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+body {
+    padding: 10px;
+}
+
 section {
     margin: 20px auto;
+    padding: 10px;
 }
 
 blockquote {
-    margin: 0px;
-    padding-left: 1px;
-    height: 20px;
+    margin:0;
+    height: 14px;
     font-weight: bold;
     font-size: 14px;
+}
+
+li {
+    height: 30px;
+    list-style-position: inside;
+}
+
+li .remove, li .moveUp, li .moveDown {
+    float: right;
+}
+
+.display {
+    display: none;
+}
+
+ul {
+    border-top: 1px solid rgb(192, 192, 192);
+    border-bottom: 1px solid rgb(192, 192, 192);
+    min-height: 120px;
+}
+
+ul, li {
+    margin:0px;
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
 }
