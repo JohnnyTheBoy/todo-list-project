@@ -88,10 +88,21 @@ resultSection.addEventListener("click", (event) => {
                 return;
             } else {
                 noteList.insertBefore(parent, prev);
+                parent.style.backgroundColor = "";
+                let children = parent.children;
+                for (let i = 0; i < children.length; i++) {
+                    children[i].classList.add("hidden");
+                }
+
             }
         }
         else if (selected.className === "moveDown") {
-            noteList.insertBefore(next, parent);
+            if (parent === noteList.lastElementChild) {
+                return;
+            }
+            else {
+                noteList.insertBefore(next, parent);
+            }
         }
         else { noteList.innerHTML = ""; }
     }
