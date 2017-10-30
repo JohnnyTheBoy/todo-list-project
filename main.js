@@ -12,12 +12,6 @@ const noteListElements = noteList.children;
 //#endregion
 
 
-
-
-inputSection
-
-
-
 //#region - add note main function
 function addNote(input) {
     if (!checkInput(input, inputDisplay)) { return };
@@ -29,7 +23,6 @@ function addNote(input) {
 }
 //#endregion
 
-
 // document.addEventListener("click", (event) => console.log(event.target));
 
 //#region - inputSection listeners
@@ -39,7 +32,7 @@ inputSection.addEventListener("click", (event) => {
     }
 })
 
-inputSection.addEventListener("keypress",(event) => {
+inputSection.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         addNote(noteInputField);
     }
