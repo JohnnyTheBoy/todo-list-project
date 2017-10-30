@@ -12,6 +12,12 @@ const noteListElements = noteList.children;
 //#endregion
 
 
+
+
+inputSection
+
+
+
 //#region - add note main function
 function addNote(input) {
     if (!checkInput(input, inputDisplay)) { return };
@@ -19,6 +25,7 @@ function addNote(input) {
     newNote.textContent = input.value;
     noteList.appendChild(newNote);
     addNoteButtons(newNote);
+    input.value = "";
 }
 //#endregion
 
@@ -29,7 +36,12 @@ function addNote(input) {
 inputSection.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
         addNote(noteInputField);
-        noteInputField.value = "";
+    }
+})
+
+inputSection.addEventListener("keypress",(event) => {
+    if (event.key === "Enter") {
+        addNote(noteInputField);
     }
 })
 //#endregion
